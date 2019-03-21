@@ -19,8 +19,8 @@ public class Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-      //  System.out.print("hello");
-       // logger.info("start program");
+       System.out.print("hello");
+       //logger.info("start program");
     }
 
 }
