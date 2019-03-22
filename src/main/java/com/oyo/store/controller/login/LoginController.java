@@ -2,9 +2,7 @@ package com.oyo.store.controller.login;
 
 
 import java.io.IOException;
-import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.util.Date;
 import java.util.Objects;
 import java.util.Random;
 
@@ -68,7 +66,7 @@ public class LoginController {
              String password = req.getParameter("password");
              String code = req.getParameter("code").toLowerCase();
              String sessionCode = (String)req.getSession().getAttribute(CAPTCHA_KEY);
-             model.addAttribute("userName",userName);
+             model.addAttribute("user",userName);
              if(!code.equals(sessionCode.toLowerCase())){
           //   System.out.print("用户验证码错误！");
              model.addAttribute("errormsg","用户验证码错误！");
@@ -97,7 +95,7 @@ public class LoginController {
             }else {
             session.setAttribute("userId",user.getUserId());
             }
-             return "redirect:/index/index";
+             return "redirect:/index";
          }
 
 
