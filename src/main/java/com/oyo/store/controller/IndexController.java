@@ -30,6 +30,7 @@ public class IndexController {
         Integer userId = Integer.parseInt(session.getAttribute("userId")+"");
        // User user = userDao.findById(userId);
 
+        //返回首页
         return "index/index";
     }
 
